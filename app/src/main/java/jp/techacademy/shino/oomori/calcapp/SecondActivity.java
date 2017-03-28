@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.FloatRange;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
@@ -12,6 +13,7 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        Log.d("Android(SecondActivity)", "onCreate");
 
         Intent intent = getIntent();
         double value1 = intent.getDoubleExtra("VALUE1", 0);
@@ -33,5 +35,41 @@ public class SecondActivity extends AppCompatActivity {
         }
 
         textView.setText(String.valueOf(result));
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("Android(SecondActivity)", "onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("Android(SecondActivity)", "onResume");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("Android(SecondActivity)", "onPause");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("Android(SecondActivity)", "onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("Android(SecondActivity)", "onDestroy");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("Android(SecondActivity)", "onRestart");
     }
 }
