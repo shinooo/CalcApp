@@ -9,22 +9,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1つ目の数字："
-        android:id="@+id/textView"/>
+        android:id="@+id/textView1"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
+        android:inputType="numberDecimal"
         android:id="@+id/editText1"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2つ目の数字："
-        android:id="@+id/textView"/>
+        android:id="@+id/textView2"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
+        android:inputType="numberDecimal"
         android:id="@+id/editText2"/>
 
     <Button
